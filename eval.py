@@ -49,7 +49,7 @@ def parse_args(argv=None):
                         help='Further restrict the number of predictions to parse')
     parser.add_argument('--cuda', default=True, type=str2bool,
                         help='Use cuda to evaulate model')
-    parser.add_argument('--fast_nms', default=True, type=str2bool,
+    parser.add_argument('--fast_nms', default=False, type=str2bool,
                         help='Whether to use a faster, but not entirely correct version of NMS.')
     parser.add_argument('--cluster_nms', default=False, type=str2bool,
                         help='Whether to use a fast and correct version of NMS.')
@@ -59,7 +59,7 @@ def parse_args(argv=None):
                         help='Whether to use a score penalty mechanism for cluster NMS.')
     parser.add_argument('--spm_dist', default=False, type=str2bool,
                         help='Whether to use a score penalty mechanism + distance for cluster NMS.')
-    parser.add_argument('--spm_dist_weighted', default=False, type=str2bool,
+    parser.add_argument('--spm_dist_weighted', default=True, type=str2bool,
                         help='Whether to use a score penalty mechanism + distance + weighted coordinates for cluster NMS.')
     parser.add_argument('--cross_class_nms', default=False, type=str2bool,
                         help='Whether compute NMS cross-class or per-class. It surports above NMS strategies.')
